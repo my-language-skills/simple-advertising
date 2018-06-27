@@ -1,7 +1,5 @@
 # Simple Advertising
 
-[![Join the chat at https://gitter.im/simple-advertising/Lobby](https://badges.gitter.im/simple-advertising/Lobby.svg)](https://gitter.im/simple-advertising/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 * Contributors: danzhik
 * Donate link:
 * Tags: revisions,cleaning

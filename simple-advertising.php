@@ -4,7 +4,7 @@
 Plugin Name: Simple Advertising
 Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
 Description: With use of this plugin you will be able to allocate advertisements on all of your post types. Only for multisite installations!(single site soon)
-Version: 0.1
+Version: 1.0
 Author: Daniil Zhitnitskii (My Language Skills)
 Author URI: http://URI_Of_The_Plugin_Author
 License: GPL 3.0

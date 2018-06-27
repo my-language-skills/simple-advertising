@@ -1,11 +1,11 @@
 # Simple Advertising
 * Contributors: danzhik
-* Donate link: http://example.com/
+* Donate link:
 * Tags: revisions,cleaning
 * Requires at least: 3.0.1
 * Tested up to: 4.9.6
 * Requires PHP: 7.2.0
-* Stable tag: 0.1
+* Stable tag: 1.0
 * License: GNU 3.0
 * License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
  
@@ -30,10 +30,10 @@ Sure, you can do it with HTML tags `<img>` if you write the advertisement as HTM
 ## Screenshots 
  
 ### Settings page in network administration
-![Settings Page Network](/assets/screenshot-1) 
+![Settings Page Network](/assets/screenshot-1.png) 
 
 ### Example of advertisement in front-end
-![Example](/assets/screenshot-2)
+![Example](/assets/screenshot-2.png)
  
 ## Changelog 
  

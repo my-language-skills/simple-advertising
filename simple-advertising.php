@@ -22,10 +22,10 @@ if ( ! defined( 'WPINC' ) ) {
  * @since 0.1
  * @author Daniil Zhitnitskii @danzhik
  */
-function network_set_page(){
+function mlsads_network_set_page(){
 
 	//creating network administration page
-	add_submenu_page('settings.php', 'MLS Advirtisement', 'MLS Advertisement', 'manage_network_options', 'mlsads_net_settings', 'render_net_sett');
+	add_submenu_page('settings.php', 'MLS Advirtisement', 'MLS Advertisement', 'manage_network_options', 'mlsads_net_settings', 'mlsads_render_net_sett');
 
 	//adding section to main options page
 	add_settings_section('mlsads_locations', 'Advertisement Locations', '', 'mlsads_net_settings');
@@ -90,7 +90,7 @@ function network_set_page(){
  * @since 0.1
  * @author Daniil Zhitnitskii @danzhik
  */
-function render_net_sett(){
+function mlsads_render_net_sett(){
 	?>
 	<div class="wrap">
 		<form method="POST" action="edit.php?action=update_network_options_ads">
@@ -110,7 +110,7 @@ function render_net_sett(){
  * @since 0.1
  * @author Daniil Zhitnitskii @danzhik
  */
-function update_options_ads(){
+function mlsads_update_options_ads(){
 
 	//security check, prevents direct access to update page
 	check_admin_referer('mlsads_net_settings-options');
@@ -141,7 +141,7 @@ function update_options_ads(){
  *
  * @return $html updated post content
  */
-function output_ads($html){
+function mlsads_output_ads($html){
 	global $wpdb, $current_site;
 
 	//getting option for displaying on a main site of multisite
@@ -169,7 +169,7 @@ function output_ads($html){
 }
 
 //adding actions for network settings page creation and updating
-add_action('network_admin_menu', 'network_set_page');
-add_action('network_admin_edit_update_network_options_ads', 'update_options_ads');
+add_action('network_admin_menu', 'mlsads_network_set_page');
+add_action('network_admin_edit_update_network_options_ads', 'mlsads_update_options_ads');
 //output of ads
-add_filter('the_content', 'output_ads', 20, 1);
+add_filter('the_content', 'mlsads_output_ads', 20, 1);

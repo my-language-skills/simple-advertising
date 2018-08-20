@@ -32,7 +32,7 @@ function mlsads_network_set_page(){
 
 	//getting all public post types, for Pressbooks installation only CPTs from Pressbooks will be used
 	if (is_plugin_active('pressbooks/pressbooks.php')){
-		$all_post_types = get_post_types(['public' => true, '_builtin' => false]);
+		$all_post_types = ['chapter', 'part', 'back-matter', 'front-matter'];
 	} else {
 		$all_post_types = get_post_types(['public' => true]);
 	}

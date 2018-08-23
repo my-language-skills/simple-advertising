@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
 function mlsads_network_set_page(){
 
 	//creating network administration page
-	add_submenu_page('settings.php', 'MLS Advirtisement', 'MLS Advertisement', 'manage_network_options', 'mlsads_net_settings', 'mlsads_render_net_sett');
+	add_submenu_page('settings.php', 'Advirtisement', 'Advertisement', 'manage_network_options', 'mlsads_net_settings', 'mlsads_render_net_sett');
 
 	//adding section to main options page
 	add_settings_section('mlsads_locations', 'Advertisement Locations', '', 'mlsads_net_settings');

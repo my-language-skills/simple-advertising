@@ -1,6 +1,6 @@
 # Simple Advertising
 
-* Contributors: danzhik, colomet
+* Contributors: colomet, danzhik
 * Donate link:
 * Tags: revisions,cleaning
 * Requires at least: 3.0.1
@@ -31,13 +31,14 @@ Sure, you can do it with HTML tags `<img>` if you write the advertisement as HTM
 ## Screenshots 
  
 ### Settings page in network administration
-![Settings Page Network](/assets/screenshot-1.png) 
+![Settings Page Network](/wp-assets/screenshot-1.png) 
 
 ### Example of advertisement in front-end
-![Example](/assets/screenshot-2.png)
+![Example](/wp-assets/screenshot-2.png)
  
 ## Changelog 
- 
+
+1.0 first release
 
  
 ## Upgrade Notice 

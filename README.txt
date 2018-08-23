@@ -1,7 +1,7 @@
 === Simple Advertising ===
-Contributors: danzhik
+Contributors: colomet, danzhik
 Donate link: 
-Tags: ads,advertisment
+Tags: ads, advertisment
 Requires at least: 3.0.1
 Tested up to: 4.9.6
 Requires PHP: 7.2.0
@@ -9,7 +9,7 @@ Stable tag: 1.0
 License: GNU 3.0
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
  
-This plugin provides simple handy tool for spreading advirtisment over all web-pages which display posts or pages. Only works with multisite installation!(single-site coming soon)
+This plugin provides simple handy tool for spreading advertisment over all web-pages which display posts or pages. Only works with multisite installation!(single-site coming soon)
  
 == Description ==
  

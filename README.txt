@@ -32,6 +32,8 @@ Sure, you can do it with HTML tags `<img>` if you write the advertisement as HTM
 2. Example of advertisement in front-end
  
 == Changelog ==
+
+1.0 first release
  
 
  

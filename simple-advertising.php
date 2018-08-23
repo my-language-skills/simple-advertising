@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
 function mlsads_network_set_page(){
 
 	//creating network administration page
-	add_submenu_page('settings.php', 'Advirtisement', 'Advertisement', 'manage_network_options', 'mlsads_net_settings', 'mlsads_render_net_sett');
+	add_submenu_page('settings.php', 'Simple Advirtising', 'Simple Advertising', 'manage_network_options', 'mlsads_net_settings', 'mlsads_render_net_sett');
 
 	//adding section to main options page
 	add_settings_section('mlsads_locations', 'Advertisement Locations', '', 'mlsads_net_settings');
@@ -59,17 +59,32 @@ function mlsads_network_set_page(){
 	add_settings_section('mlsads_contents', 'Advertisement Content', '', 'mlsads_net_settings');
 	register_setting('mlsads_net_settings', 'mlsads_content_before');
 	register_setting('mlsads_net_settings', 'mlsads_content_after');
+	register_setting('mlsads_net_settings', 'mlsads_content_link_before');
+	register_setting('mlsads_net_settings', 'mlsads_content_link_after');
 
 	//adding content fields
-	add_settings_field('mlsads_content_before', '"Before" image (URL):', function (){
+	add_settings_field('mlsads_content_before', '"Before" image (source URL):', function (){
 		?>
-			<input type="url" style="width: 50%;" id="mlsads_content_before" name="mlsads_content_before" value="<?=get_site_option('mlsads_content_before') ?: ''?>">
+			<input type="url" style="width: 50%;" placeholder="www.example.com/wp-content/uploads/2018/01/image-example.jpg" id="mlsads_content_before" name="mlsads_content_before" value="<?=get_site_option('mlsads_content_before') ?: ''?>">
 		<?php
 	}, 'mlsads_net_settings', 'mlsads_contents');
 
-	add_settings_field('mlsads_content_after', '"After" image (URL):', function (){
+
+	add_settings_field('mlsads_content_link_before', 'External link (if filled in, image becomes a link):', function (){
 		?>
-		<input type="url" style="width: 50%;" id="mlsads_content_after" name="mlsads_content_after" value="<?=get_site_option('mlsads_content_after') ?: ''?>">
+			<input type="url" style="width: 50%;" placeholder="www.example.com/link-to-the-post" id="mlsads_content_link_before" name="mlsads_content_link_before" value="<?=get_site_option('mlsads_content_link_before') ?: ''?>">
+		<?php
+	}, 'mlsads_net_settings', 'mlsads_contents');
+
+	add_settings_field('mlsads_content_after', '"After" image (source URL):', function (){
+		?>
+		<input type="url" style="width: 50%;" placeholder="www.example.com/wp-content/uploads/2018/01/image-example.jpg" id="mlsads_content_after" name="mlsads_content_after" value="<?=get_site_option('mlsads_content_after') ?: ''?>">
+		<?php
+	}, 'mlsads_net_settings', 'mlsads_contents');
+
+	add_settings_field('mlsads_content_link_after', 'External link (if filled in, image becomes a link):', function (){
+		?>
+			<input type="url" style="width: 50%;" placeholder="www.example.com/link-to-the-post" id="mlsads_content_link_after" name="mlsads_content_link_after" value="<?=get_site_option('mlsads_content_link_after') ?: ''?>">
 		<?php
 	}, 'mlsads_net_settings', 'mlsads_contents');
 
@@ -129,6 +144,7 @@ function mlsads_update_options_ads(){
 		} else {
 			$val = isset($_POST[$option]) ? filter_var( $_POST[$option], FILTER_SANITIZE_NUMBER_INT ) : '';
 		}
+
 		if ($val) {
 			update_site_option($option, $val);
 		} else {
@@ -167,12 +183,22 @@ function mlsads_output_ads($html){
 	if ( $display_ads == 'yes' ) {
 		$post_type = get_post_type();
 		if (get_site_option($post_type.'_ads_before') == 1){
-			$content = '<img src="'.get_site_option('mlsads_content_before').'">';
+
+			if (get_site_option('mlsads_content_link_before')){
+				$content = '<a href="'.get_site_option('mlsads_content_link_before').'"><img src="'.get_site_option('mlsads_content_before').'"></a>';
+			} else {
+				$content = '<img src="'.get_site_option('mlsads_content_before').'">';
+			}
 			$html = $content.$html;
 		}
 
 		if (get_site_option($post_type.'_ads_after' ) == 1) {
-			$content = '<img src="'.get_site_option('mlsads_content_after').'">';
+
+			if (get_site_option('mlsads_content_link_after')){
+				$content = '<a href="'.get_site_option('mlsads_content_link_after').'"><img src="'.get_site_option('mlsads_content_after').'"></a>';
+			} else {
+				$content = '<img src="'.get_site_option('mlsads_content_after').'">';
+			}
 			$html .= $content;
 		}
 	}

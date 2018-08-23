@@ -22,13 +22,13 @@ if ( ! defined( 'WPINC' ) ) {
  * @since 0.1
  * @author Daniil Zhitnitskii @danzhik
  */
-function mlsads_network_set_page(){
+function smplads_network_set_page(){
 
 	//creating network administration page
-	add_submenu_page('settings.php', 'Simple Advirtising', 'Simple Advertising', 'manage_network_options', 'mlsads_net_settings', 'mlsads_render_net_sett');
+	add_submenu_page('settings.php', 'Simple Advirtising', 'Simple Advertising', 'manage_network_options', 'smplads_net_settings', 'smplads_render_net_sett');
 
 	//adding section to main options page
-	add_settings_section('mlsads_locations', 'Advertisement Locations', '', 'mlsads_net_settings');
+	add_settings_section('smplads_locations', 'Advertisement Locations', '', 'smplads_net_settings');
 
 	//getting all public post types, for Pressbooks installation only CPTs from Pressbooks will be used
 	if (is_plugin_active('pressbooks/pressbooks.php')){
@@ -39,8 +39,8 @@ function mlsads_network_set_page(){
 
 	//creating location options for each post type
 	foreach ($all_post_types as $post_type){
-		register_setting('mlsads_net_settings', $post_type.'_ads_after');
-		register_setting('mlsads_net_settings', $post_type.'_ads_before');
+		register_setting('smplads_net_settings', $post_type.'_ads_after');
+		register_setting('smplads_net_settings', $post_type.'_ads_before');
 		//function for creation of options fields
 		$render_locations = function () use ($post_type){
 			?>
@@ -52,50 +52,50 @@ function mlsads_network_set_page(){
 			</label>
 			<?php
 		};
-		add_settings_field($post_type.'_ads', 'In '.ucfirst($post_type).' Content', $render_locations, 'mlsads_net_settings', 'mlsads_locations');
+		add_settings_field($post_type.'_ads', 'In '.ucfirst($post_type).' Content', $render_locations, 'smplads_net_settings', 'smplads_locations');
 	}
 
 	//creating section for ads content
-	add_settings_section('mlsads_contents', 'Advertisement Content', '', 'mlsads_net_settings');
-	register_setting('mlsads_net_settings', 'mlsads_content_before');
-	register_setting('mlsads_net_settings', 'mlsads_content_after');
-	register_setting('mlsads_net_settings', 'mlsads_content_link_before');
-	register_setting('mlsads_net_settings', 'mlsads_content_link_after');
+	add_settings_section('smplads_contents', 'Advertisement Content', '', 'smplads_net_settings');
+	register_setting('smplads_net_settings', 'smplads_content_before');
+	register_setting('smplads_net_settings', 'smplads_content_after');
+	register_setting('smplads_net_settings', 'smplads_content_link_before');
+	register_setting('smplads_net_settings', 'smplads_content_link_after');
 
 	//adding content fields
-	add_settings_field('mlsads_content_before', '"Before" image (source URL):', function (){
+	add_settings_field('smplads_content_before', '"Before" image (source URL):', function (){
 		?>
-			<input type="url" style="width: 50%;" placeholder="www.example.com/wp-content/uploads/2018/01/image-example.jpg" id="mlsads_content_before" name="mlsads_content_before" value="<?=get_site_option('mlsads_content_before') ?: ''?>">
+			<input type="url" style="width: 50%;" placeholder="www.example.com/wp-content/uploads/2018/01/image-example.jpg" id="smplads_content_before" name="smplads_content_before" value="<?=get_site_option('smplads_content_before') ?: ''?>">
 		<?php
-	}, 'mlsads_net_settings', 'mlsads_contents');
+	}, 'smplads_net_settings', 'smplads_contents');
 
 
-	add_settings_field('mlsads_content_link_before', 'External link (if filled in, image becomes a link):', function (){
+	add_settings_field('smplads_content_link_before', 'External link (if filled in, image becomes a link):', function (){
 		?>
-			<input type="url" style="width: 50%;" placeholder="www.example.com/link-to-the-post" id="mlsads_content_link_before" name="mlsads_content_link_before" value="<?=get_site_option('mlsads_content_link_before') ?: ''?>">
+			<input type="url" style="width: 50%;" placeholder="www.example.com/link-to-the-post" id="smplads_content_link_before" name="smplads_content_link_before" value="<?=get_site_option('smplads_content_link_before') ?: ''?>">
 		<?php
-	}, 'mlsads_net_settings', 'mlsads_contents');
+	}, 'smplads_net_settings', 'smplads_contents');
 
-	add_settings_field('mlsads_content_after', '"After" image (source URL):', function (){
+	add_settings_field('smplads_content_after', '"After" image (source URL):', function (){
 		?>
-		<input type="url" style="width: 50%;" placeholder="www.example.com/wp-content/uploads/2018/01/image-example.jpg" id="mlsads_content_after" name="mlsads_content_after" value="<?=get_site_option('mlsads_content_after') ?: ''?>">
+		<input type="url" style="width: 50%;" placeholder="www.example.com/wp-content/uploads/2018/01/image-example.jpg" id="smplads_content_after" name="smplads_content_after" value="<?=get_site_option('smplads_content_after') ?: ''?>">
 		<?php
-	}, 'mlsads_net_settings', 'mlsads_contents');
+	}, 'smplads_net_settings', 'smplads_contents');
 
-	add_settings_field('mlsads_content_link_after', 'External link (if filled in, image becomes a link):', function (){
+	add_settings_field('smplads_content_link_after', 'External link (if filled in, image becomes a link):', function (){
 		?>
-			<input type="url" style="width: 50%;" placeholder="www.example.com/link-to-the-post" id="mlsads_content_link_after" name="mlsads_content_link_after" value="<?=get_site_option('mlsads_content_link_after') ?: ''?>">
+			<input type="url" style="width: 50%;" placeholder="www.example.com/link-to-the-post" id="smplads_content_link_after" name="smplads_content_link_after" value="<?=get_site_option('smplads_content_link_after') ?: ''?>">
 		<?php
-	}, 'mlsads_net_settings', 'mlsads_contents');
+	}, 'smplads_net_settings', 'smplads_contents');
 
 	//add section for main blog
-	add_settings_section('mlsads_main_blog', 'Main blog', '', 'mlsads_net_settings');
-	register_setting('mlsads_net_settings', 'mlsads_main_out');
-	add_settings_field('mlsads_main_out', 'No showing Ads', function (){
+	add_settings_section('smplads_main_blog', 'Main blog', '', 'smplads_net_settings');
+	register_setting('smplads_net_settings', 'smplads_main_out');
+	add_settings_field('smplads_main_out', 'No showing Ads', function (){
 		?>
-		<input type="checkbox" value = 1 name="mlsads_main_out" id="mlsads_main_out" <?= checked(1,  get_site_option('mlsads_main_out'))?>>
+		<input type="checkbox" value = 1 name="smplads_main_out" id="smplads_main_out" <?= checked(1,  get_site_option('smplads_main_out'))?>>
 		<?php
-	}, 'mlsads_net_settings' ,'mlsads_main_blog');
+	}, 'smplads_net_settings' ,'smplads_main_blog');
 }
 
 
@@ -105,7 +105,7 @@ function mlsads_network_set_page(){
  * @since 0.1
  * @author Daniil Zhitnitskii @danzhik
  */
-function mlsads_render_net_sett(){
+function smplads_render_net_sett(){
 	?>
 	<div class="wrap">
 		<div class="notice updated is-dismissible"> 
@@ -113,8 +113,8 @@ function mlsads_render_net_sett(){
 		</div>
 		<form method="POST" action="edit.php?action=update_network_options_ads">
 			<?php
-			settings_fields('mlsads_net_settings');
-			do_settings_sections('mlsads_net_settings');
+			settings_fields('smplads_net_settings');
+			do_settings_sections('smplads_net_settings');
 			submit_button();
 			?>
 		</form>
@@ -128,14 +128,14 @@ function mlsads_render_net_sett(){
  * @since 0.1
  * @author Daniil Zhitnitskii @danzhik
  */
-function mlsads_update_options_ads(){
+function smplads_update_options_ads(){
 
 	//security check, prevents direct access to update page
-	check_admin_referer('mlsads_net_settings-options');
+	check_admin_referer('smplads_net_settings-options');
 
 	// This is the list of registered options.
 	global $new_whitelist_options;
-	$options = array_unique($new_whitelist_options['mlsads_net_settings']);
+	$options = array_unique($new_whitelist_options['smplads_net_settings']);
 
 	//updating all options received from options page
 	foreach ($options as $option){
@@ -153,7 +153,7 @@ function mlsads_update_options_ads(){
 	}
 
 	// At the end we redirect back to our options page.
-	wp_redirect(add_query_arg(array('page' => 'mlsads_net_settings',
+	wp_redirect(add_query_arg(array('page' => 'smplads_net_settings',
 	                                'updated' => 'true'), network_admin_url('settings.php')));
 
 	exit;
@@ -168,11 +168,11 @@ function mlsads_update_options_ads(){
  *
  * @return $html updated post content
  */
-function mlsads_output_ads($html){
+function smplads_output_ads($html){
 	global $wpdb, $current_site;
 
 	//getting option for displaying on a main site of multisite
-	$advertising_main_blog = get_site_option('mlsads_main_out', 'show');
+	$advertising_main_blog = get_site_option('smplads_main_out', 'show');
 	$display_ads = 'yes';
 
 	//if said not to display on main site and current blog is main site, do nothing
@@ -184,20 +184,20 @@ function mlsads_output_ads($html){
 		$post_type = get_post_type();
 		if (get_site_option($post_type.'_ads_before') == 1){
 
-			if (get_site_option('mlsads_content_link_before')){
-				$content = '<a href="'.get_site_option('mlsads_content_link_before').'"><img src="'.get_site_option('mlsads_content_before').'"></a>';
+			if (get_site_option('smplads_content_link_before')){
+				$content = '<a href="'.get_site_option('smplads_content_link_before').'"><img src="'.get_site_option('smplads_content_before').'"></a>';
 			} else {
-				$content = '<img src="'.get_site_option('mlsads_content_before').'">';
+				$content = '<img src="'.get_site_option('smplads_content_before').'">';
 			}
 			$html = $content.$html;
 		}
 
 		if (get_site_option($post_type.'_ads_after' ) == 1) {
 
-			if (get_site_option('mlsads_content_link_after')){
-				$content = '<a href="'.get_site_option('mlsads_content_link_after').'"><img src="'.get_site_option('mlsads_content_after').'"></a>';
+			if (get_site_option('smplads_content_link_after')){
+				$content = '<a href="'.get_site_option('smplads_content_link_after').'"><img src="'.get_site_option('smplads_content_after').'"></a>';
 			} else {
-				$content = '<img src="'.get_site_option('mlsads_content_after').'">';
+				$content = '<img src="'.get_site_option('smplads_content_after').'">';
 			}
 			$html .= $content;
 		}
@@ -206,7 +206,7 @@ function mlsads_output_ads($html){
 }
 
 //adding actions for network settings page creation and updating
-add_action('network_admin_menu', 'mlsads_network_set_page');
-add_action('network_admin_edit_update_network_options_ads', 'mlsads_update_options_ads');
+add_action('network_admin_menu', 'smplads_network_set_page');
+add_action('network_admin_edit_update_network_options_ads', 'smplads_update_options_ads');
 //output of ads
-add_filter('the_content', 'mlsads_output_ads', 20, 1);
+add_filter('the_content', 'smplads_output_ads', 20, 1);

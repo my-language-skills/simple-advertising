@@ -14,4 +14,4 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 //declaring global DB connection variable
 global $wpdb;
 
-$wpdb->query( "DELETE FROM `".$wpdb->prefix."sitemeta` WHERE (`meta_key` LIKE 'mlsads_%') OR (`meta_key` LIKE '%_ads_%');");
+$wpdb->query( "DELETE FROM `".$wpdb->prefix."sitemeta` WHERE (`meta_key` LIKE 'smplads_%') OR (`meta_key` LIKE '%_ads_%');");

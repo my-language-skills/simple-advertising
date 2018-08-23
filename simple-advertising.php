@@ -61,15 +61,15 @@ function mlsads_network_set_page(){
 	register_setting('mlsads_net_settings', 'mlsads_content_after');
 
 	//adding content fields
-	add_settings_field('mlsads_content_before', '"Before" ads content:', function (){
+	add_settings_field('mlsads_content_before', '"Before" image (URL):', function (){
 		?>
-			<textarea rows="5" style="width: 90%" id="mlsads_content_before" name="mlsads_content_before"><?= get_site_option('mlsads_content_before') ?: ''?></textarea>
+			<input type="url" style="width: 50%;" id="mlsads_content_before" name="mlsads_content_before" value="<?=get_site_option('mlsads_content_before') ?: ''?>">
 		<?php
 	}, 'mlsads_net_settings', 'mlsads_contents');
 
-	add_settings_field('mlsads_content_after', '"After" ads content:', function (){
+	add_settings_field('mlsads_content_after', '"After" image (URL):', function (){
 		?>
-		<textarea rows="5" style="width: 90%" id="mlsads_content_after" name="mlsads_content_after"><?= get_site_option('mlsads_content_after') ?: ''?></textarea>
+		<input type="url" style="width: 50%;" id="mlsads_content_after" name="mlsads_content_after" value="<?=get_site_option('mlsads_content_after') ?: ''?>">
 		<?php
 	}, 'mlsads_net_settings', 'mlsads_contents');
 
@@ -93,6 +93,9 @@ function mlsads_network_set_page(){
 function mlsads_render_net_sett(){
 	?>
 	<div class="wrap">
+		<div class="notice updated is-dismissible"> 
+				<p><strong>Settings saved.</strong></p>
+		</div>
 		<form method="POST" action="edit.php?action=update_network_options_ads">
 			<?php
 			settings_fields('mlsads_net_settings');
@@ -121,8 +124,16 @@ function mlsads_update_options_ads(){
 
 	//updating all options received from options page
 	foreach ($options as $option){
-		$val = isset($_POST[$option]) ? $_POST[$option] : '';
-		update_site_option($option, $val);
+		if (stripos($option, 'content')){
+			$val = isset($_POST[$option]) ? esc_url_raw($_POST[$option]) : '';
+		} else {
+			$val = isset($_POST[$option]) ? filter_var( $_POST[$option], FILTER_SANITIZE_NUMBER_INT ) : '';
+		}
+		if ($val) {
+			update_site_option($option, $val);
+		} else {
+			delete_site_option($option);
+		}
 	}
 
 	// At the end we redirect back to our options page.
@@ -156,12 +167,12 @@ function mlsads_output_ads($html){
 	if ( $display_ads == 'yes' ) {
 		$post_type = get_post_type();
 		if (get_site_option($post_type.'_ads_before') == 1){
-			$content = get_site_option('mlsads_content_before');
+			$content = '<img src="'.get_site_option('mlsads_content_before').'">';
 			$html = $content.$html;
 		}
 
 		if (get_site_option($post_type.'_ads_after' ) == 1) {
-			$content = get_site_option('mlsads_content_after');
+			$content = '<img src="'.get_site_option('mlsads_content_after').'">';
 			$html .= $content;
 		}
 	}

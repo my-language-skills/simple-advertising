@@ -13,7 +13,7 @@ This plugin provides simple handy tool for spreading advertisment over all web-p
  
 == Description ==
  
-With use of this plugin you can set some announcements, ads etc. in all your web-site's posts content. The content of advertisements can be a simple text or HTML-markup written text. Management of the advertisement is done from a plugin settings subpage under Network Settings page. 
+With use of this plugin you can set some announcements, ads etc. in all your web-site's posts content. The content of advertisements is a simple image with a link (if necessary). Management of the advertisement is done from a plugin settings subpage under Network Settings page. 
  
 == Installation ==
  
@@ -22,10 +22,10 @@ With use of this plugin you can set some announcements, ads etc. in all your web
  
 == Frequently Asked Questions ==
 
-= Can I allocate images in the advertisement sections? =
+= Cache plugins =
 
-Sure, you can do it with HTML tags `<img>` if you write the advertisement as HTML code. Just provide a source to picture you need (URL for external or path for images stored on your web-site) in `source` attribute of `<img>` tag and that's it!
- 
+Please, clean the cache after you save configure the ads. Otherwise the image will not be load.
+
 == Screenshots ==
  
 1. Settings page in network administration

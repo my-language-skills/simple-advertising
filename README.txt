@@ -1,6 +1,6 @@
 === Simple Advertising ===
 Contributors: colomet, danzhik
-Donate link: 
+Donate link: https://opencollective.com/mylanguageskills
 Tags: ads, advertisment
 Requires at least: 3.0.1
 Tested up to: 4.9.6

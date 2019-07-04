@@ -4,8 +4,8 @@
 Plugin Name: Simple Advertising
 Plugin URI: https://github.com/my-language-skills/simple-advertising
 Description: With use of this plugin you will be able to allocate advertisements on all of your post types. Only for multisite installations!(single site soon)
-Version: 1.0
-Author: Daniil Zhitnitskii (My Language Skills)
+Version: 1.0.1
+Author: My Language Skills team
 Author URI: https://github.com/my-language-skills
 License: GPL 3.0
 Network: True
@@ -109,7 +109,7 @@ function smplads_network_set_page(){
 function smplads_render_net_sett(){
 	?>
 	<div class="wrap">
-		<div class="notice updated is-dismissible"> 
+		<div class="notice updated is-dismissible">
 				<p><strong>Settings saved.</strong></p>
 		</div>
 		<form method="POST" action="edit.php?action=update_network_options_ads">

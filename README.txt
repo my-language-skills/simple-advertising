@@ -1,5 +1,5 @@
 === Simple Advertising ===
-Contributors: colomet, danzhik
+Contributors: colomet, danzhik, davideC00
 Donate link: https://opencollective.com/mylanguageskills
 Tags: ads, advertisment
 Requires at least: 4.6.1
@@ -9,7 +9,7 @@ Stable tag: 1.0.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-This plugin provides simple handy tool for spreading advertisment (as images) over all web-pages which display posts or pages or CPT's. 
+This plugin provides simple handy tool for spreading advertisment (as images) over all web-pages which display posts or pages or CPT's.
 
 Only works with multisite installation!
 
@@ -39,6 +39,7 @@ Please, clean the cache after you save configure the ads. Otherwise the image wi
 
 = 1.0.2 =
 ADDITIONS: Plugin internationalisation
+ENHANCEMENTS: Placeholder bugs fixes
 
 = 1.0.1 =
 ADDITIONS: Only multisite installation is available

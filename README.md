@@ -1,6 +1,6 @@
 # Simple Advertising
 
-* Contributors: colomet, danzhik
+* Contributors: colomet, danzhik, davideC00
 * Donate link:
 * Tags: revisions,cleaning
 * Requires at least: 3.0.1

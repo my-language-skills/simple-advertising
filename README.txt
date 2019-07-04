@@ -5,7 +5,7 @@ Tags: ads, advertisment
 Requires at least: 4.6.1
 Tested up to: 5.2.2
 Requires PHP: 5.5.0
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -35,6 +35,9 @@ Please, clean the cache after you save configure the ads. Otherwise the image wi
 
 == Changelog ==
 
+= 1.0.2 =
+ADDITIONS: Plugin internationalisation
+
 = 1.0.1 =
 ADDITIONS: Only multisite installation is available
 ENHANCEMENTS: Downgrade php required version to 5.6
@@ -45,8 +48,8 @@ ENHANCEMENTS: Downgrade php required version to 5.6
 
 == Upgrade Notice ==
 
-= 1.0.1 =
-Bug fixes (works on php 5.6; just multisite activation is now available)
+= 1.0.2 =
+Plugin internationalisation
 
 == Disclaimers ==
 

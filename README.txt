@@ -50,6 +50,6 @@ Bug fixes (works on php 5.6; just multisite activation is now available)
 
 == Disclaimers ==
 
-The All in one metadata plugin is supplied "as is" and all use is at your own risk.
+The Simple Advertising plugin is supplied "as is" and all use is at your own risk.
 
-All in one metadata is under development. Version 1.0 is stable but is an start. Soon much more possibilities.
+Simple Advertising is under development. Version 1.0 is stable but is an start. Soon much more possibilities.

@@ -40,6 +40,8 @@ Please, clean the cache after you save configure the ads. Otherwise the image wi
 ### 1.0.2
 * ADDITIONS
   * Plugin internationalisation
+* ENHANCEMENTS
+  * Placeholder bugs fixes
 
 ### 1.0.1
 * ADDITIONS

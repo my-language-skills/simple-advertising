@@ -22,6 +22,8 @@ With use of this plugin you can set some announcements, ads etc. in all your web
  
 == Frequently Asked Questions ==
 
+For specifical questions, check [GitHub](https://github.com/my-language-skills/simple-advertising)
+
 = Cache plugins =
 
 Please, clean the cache after you save configure the ads. Otherwise the image will not be load.

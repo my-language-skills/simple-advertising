@@ -8,6 +8,7 @@ Version: 1.0
 Author: Daniil Zhitnitskii (My Language Skills)
 Author URI: https://github.com/my-language-skills
 License: GPL 3.0
+Network: True
 */
 
 // If this file is called directly, abort.

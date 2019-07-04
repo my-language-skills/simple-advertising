@@ -74,26 +74,26 @@ function smplads_network_set_page(){
 	//adding content fields
 	add_settings_field('smplads_content_before', __('"Before" image (source URL):', 'simple-advertising'), function (){
 		?>
-			<input type="url" style="width: 50%;" placeholder="www.example.com/wp-content/uploads/2018/01/image-example.jpg" id="smplads_content_before" name="smplads_content_before" value="<?=get_site_option('smplads_content_before') ?: ''?>">
+			<input type="url" style="width: 50%;" placeholder="https://www.example.com/wp-content/uploads/2018/01/image-example.jpg" id="smplads_content_before" name="smplads_content_before" value="<?=get_site_option('smplads_content_before') ?: ''?>">
 		<?php
 	}, 'smplads_net_settings', 'smplads_contents');
 
 
 	add_settings_field('smplads_content_link_before', __('External link (if filled in, image becomes a link):', 'simple-advertising'), function (){
 		?>
-			<input type="url" style="width: 50%;" placeholder="www.example.com/link-to-the-post" id="smplads_content_link_before" name="smplads_content_link_before" value="<?=get_site_option('smplads_content_link_before') ?: ''?>">
+			<input type="url" style="width: 50%;" placeholder="https://www.example.com/link-to-the-post" id="smplads_content_link_before" name="smplads_content_link_before" value="<?=get_site_option('smplads_content_link_before') ?: ''?>">
 		<?php
 	}, 'smplads_net_settings', 'smplads_contents');
 
 	add_settings_field('smplads_content_after', __('"After" image (source URL):', 'simple-advertising'), function (){
 		?>
-		<input type="url" style="width: 50%;" placeholder="www.example.com/wp-content/uploads/2018/01/image-example.jpg" id="smplads_content_after" name="smplads_content_after" value="<?=get_site_option('smplads_content_after') ?: ''?>">
+		<input type="url" style="width: 50%;" placeholder="https://www.example.com/wp-content/uploads/2018/01/image-example.jpg" id="smplads_content_after" name="smplads_content_after" value="<?=get_site_option('smplads_content_after') ?: ''?>">
 		<?php
 	}, 'smplads_net_settings', 'smplads_contents');
 
 	add_settings_field('smplads_content_link_after', __('External link (if filled in, image becomes a link):', 'simple-advertising'), function (){
 		?>
-			<input type="url" style="width: 50%;" placeholder="www.example.com/link-to-the-post" id="smplads_content_link_after" name="smplads_content_link_after" value="<?=get_site_option('smplads_content_link_after') ?: ''?>">
+			<input type="url" style="width: 50%;" placeholder="https://www.example.com/link-to-the-post" id="smplads_content_link_after" name="smplads_content_link_after" value="<?=get_site_option('smplads_content_link_after') ?: ''?>">
 		<?php
 	}, 'smplads_net_settings', 'smplads_contents');
 

@@ -4,41 +4,48 @@
 * Donate link:
 * Tags: revisions,cleaning
 * Requires at least: 3.0.1
-* Tested up to: 4.9.6
-* Requires PHP: 7.2.0
-* Stable tag: 1.0
+* Tested up to: 5.2.2
+* Requires PHP: 5.5.0
+* Stable tag: 1.0.1
 * License: GNU 3.0
 * License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
- 
-This plugin provides simple handy tool for spreading advirtisment over all web-pages which display posts or pages. Only works with multisite installation!(single-site coming soon)
- 
-## Description 
- 
-With use of this plugin you can set some announcements, ads etc. in all your web-site's posts content. The content of advertisements can be a simple text or HTML-markup written text. Management of the advertisement is done from a plugin settings subpage under Network Settings page. 
- 
-## Installation 
- 
+
+This plugin provides simple handy tool for spreading advertisment (as images) over all web-pages which display posts or pages or CPT's. Only works with multisite installation!
+
+## Description
+
+With use of this plugin you can set some announcements, ads etc. in all your web-site's posts content. The content of advertisements is a simple image with a link (if necessary). Management of the advertisement is done from a plugin settings subpage under Network Settings page.
+
+## Installation
+
 1. Upload plugin folder to /wp-content/plugins/ folder in your web-site file-system.
 1. Activate it from 'Plugins page' in your website.
- 
-## Frequently Asked Questions 
- 
-### Can I allocate images in the advertisement sections?
 
-Sure, you can do it with HTML tags `<img>` if you write the advertisement as HTML code. Just provide a source to picture you need (URL for external or path for images stored on your web-site) in `source` attribute of `<img>` tag and that's it!
+## Frequently Asked Questions
 
- 
-## Screenshots 
- 
+### Cache plugins
+
+Please, clean the cache after you save configure the ads. Otherwise the image will not be load.
+
+## Screenshots
+
 ### Settings page in network administration
-![Settings Page Network](/wp-assets/screenshot-1.png) 
+![Settings Page Network](/wp-assets/screenshot-1.png)
 
 ### Example of advertisement in front-end
 ![Example](/wp-assets/screenshot-2.png)
- 
-## Changelog 
 
-1.0 first release
+## Changelog
 
- 
-## Upgrade Notice 
+## 1.0.1
+* ADDITIONS
+  * Only multisite installation is available
+* ENHANCEMENTS
+  * Downgrade php required version to 5.6
+
+
+
+## 1.0 first release
+
+
+## Upgrade Notice

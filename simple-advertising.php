@@ -1,17 +1,29 @@
 <?php
 
-/*
-Plugin Name: Simple Advertising
-Plugin URI: https://github.com/my-language-skills/simple-advertising
-Description: With use of this plugin you will be able to allocate advertisements on all of your post types. Only for multisite installations!(single site soon)
-Version: 1.0.2
-Author: My Language Skills team
-Author URI: https://github.com/my-language-skills
-License: GPL 3.0
-Network: True
-Text Domain: simple-advertising
-Domain Path: /languages
-*/
+/**
+ * Simple Advertising
+ *
+ * This file is read by WordPress to generate the plugin information in the plugin
+ * admin area. This file also includes all of the dependencies used by the plugin,
+ * registers the activation and deactivation functions, and defines a function
+ * that starts the plugin.
+ *
+ * @link              https://github.com/my-language-skills/simple-advertising
+ * @since             0.1
+ * @package           simple-advertising
+ *
+ * @wordpress-plugin
+ * Plugin Name:       Simple Advertising
+ * Plugin URI:        https://github.com/my-language-skills/simple-advertising
+ * Description:       With use of this plugin you will be able to allocate advertisements on all of your post types. Only for multisite installations!(single site soon)
+ * Version:           1.0.2
+ * Author:            My Language Skills team
+ * Author URI:        https://github.com/my-language-skills/
+ * License:           GPL 3.0
+ * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
+ * Text Domain:       simple-advertising
+ * Domain Path:       /languages
+ */
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {

@@ -1,7 +1,7 @@
 === Simple Advertising ===
 Contributors: colomet, danzhik, davideC00
 Donate link: https://opencollective.com/mylanguageskills
-Tags: ads, advertisment
+Tags: multisite, ads, advertisment, advertisements, wordpress plugin
 Requires at least: 4.6.1
 Tested up to: 5.2.2
 Requires PHP: 5.6

@@ -23,6 +23,7 @@
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  * Text Domain:       simple-advertising
  * Domain Path:       /languages
+ * Network: 					True
  */
 
 // If this file is called directly, abort.

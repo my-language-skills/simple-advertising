@@ -33,10 +33,10 @@ if ( ! defined( 'WPINC' ) ) {
 
 
 /**
- * Function for creation of settings page
+ * Function for creation of settings page.
  *
  * @since 0.1
- * @author Daniil Zhitnitskii @danzhik
+ *
  */
 function smplads_network_set_page(){
 
@@ -122,10 +122,10 @@ function smplads_network_set_page(){
 
 
 /**
- * Function for rendering network settings page
+ * Function for rendering network settings page.
  *
  * @since 0.1
- * @author Daniil Zhitnitskii @danzhik
+ *
  */
 function smplads_render_net_sett(){
 	?>
@@ -145,10 +145,10 @@ function smplads_render_net_sett(){
 }
 
 /**
- * Function for updating network options
+ * Function for updating network options.
  *
  * @since 0.1
- * @author Daniil Zhitnitskii @danzhik
+ *
  */
 function smplads_update_options_ads(){
 
@@ -182,13 +182,13 @@ function smplads_update_options_ads(){
 }
 
 /**
- * Function for ads front-end output
+ * Function for ads front-end output.
  * @param string $html code of post content
  *
  * @since 0.1
- * @author Daniil Zhitnitskii
  *
  * @return $html updated post content
+ *
  */
 function smplads_output_ads($html){
 	global $wpdb, $current_site;
@@ -234,15 +234,15 @@ add_action('network_admin_edit_update_network_options_ads', 'smplads_update_opti
 add_filter('the_content', 'smplads_output_ads', 20, 1);
 
 /**
- * For Internalization
- * It loads the MO file for plugin's translation
+ * For Internalization.
+ * It loads the MO file for plugin's translation.
  *
  * @param void
  *
  * @since 1.0.2
- * @author Davide Cazzorla @davideC00
  *
  * @return void
+ *
  */
 	function smplads_load_plugin_textdomain() {
     load_plugin_textdomain( 'simple-advertising', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );

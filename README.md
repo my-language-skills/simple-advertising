@@ -9,7 +9,7 @@
 * Stable tag: 1.0.2
 * License: GNU 3.0
 * License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
-* Gutenberg: compatible
+* Gutemberg: compatible
 
 This plugin provides simple handy tool for spreading advertisment (as images) over all web-pages which display posts or pages or CPT's. Only works with multisite installation!
 

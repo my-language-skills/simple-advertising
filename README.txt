@@ -1,5 +1,5 @@
 === Simple Advertising ===
-Contributors: colomet, danzhik, davideC00, lukastonhajzer
+Contributors: colomet, danzhik, dcazzorla, lukastonhajzer
 Donate link: https://opencollective.com/mylanguageskills
 Tags: multisite, ads, advertisment, advertisements, wordpress plugin
 Requires at least: 3.0.1

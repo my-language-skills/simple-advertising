@@ -37,12 +37,12 @@ This section describes how to install the plugin and get it working.
 
 = I have a feature request, I've found a bug, a plugin is incompatible... =
 
-Please visit [the support forums](https://wordpress.org/support/plugin/xxxxxxxx)
+Please visit [the support forums](https://wordpress.org/support/plugin/simple-advertising/)
 
 = I am a developer; how can I help? =
 
 Any input is much appreciated, and everything will be considered.
-Please visit the [GitHub project page](https://github.com/sybrew/the-seo-framework) to submit issues or even pull requests.
+Please visit the [GitHub project page](https://github.com/my-language-skills/simple-advertising) to submit issues or even pull requests.
 
 = Cache plugins =
 
@@ -69,6 +69,9 @@ ENHANCEMENTS: Downgrade php required version to 5.6
 * First release
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+* nofollow tribute to links
 
 = 1.0.2 =
 * Plugin internationalisation

@@ -1,5 +1,5 @@
 === Simple Advertising ===
-Contributors: colomet, danzhik, davideC00
+Contributors: colomet, danzhik, davideC00, lukastonhajzer
 Donate link: https://opencollective.com/mylanguageskills
 Tags: multisite, ads, advertisment, advertisements, wordpress plugin
 Requires at least: 3.0.1
@@ -11,12 +11,11 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 This plugin provides simple handy tool for spreading advertisment (as images) over all web-pages which display posts or pages or CPT's.
 
-**Only works with multisite installation!**
-
 == Description ==
 
 With use of this plugin you can set some announcements, ads etc. in all your web-site's posts content. The content of advertisements is a simple image with a link (if necessary and with the rel="nofollow" attribute). Management of the advertisement is done from a plugin settings subpage under Network Settings page.
 
+**Only works with multisite installation!**
 
 == Installation ==
 

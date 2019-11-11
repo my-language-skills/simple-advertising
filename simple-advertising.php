@@ -16,7 +16,7 @@
  * Plugin Name:       Simple Advertising
  * Plugin URI:        https://github.com/my-language-skills/simple-advertising
  * Description:       With use of this plugin you will be able to allocate advertisements on all of your post types. Only for multisite installations!(single site soon)
- * Version:           1.0.2
+ * Version:           1.0.3
  * Author:            My Language Skills team
  * Author URI:        https://github.com/my-language-skills/
  * License:           GPL 3.0

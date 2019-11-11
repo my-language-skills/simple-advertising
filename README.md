@@ -6,7 +6,7 @@
 * Requires at least: 3.0.1
 * Tested up to: 5.2.2
 * Requires PHP: 5.6
-* Stable tag: 1.0.2
+* Stable tag: 1.0.3
 * License: GPLv3 or later
 * License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 * Gutenberg: compatible
@@ -15,7 +15,7 @@ This plugin provides simple handy tool for spreading advertisment (as images) ov
 
 ## Description
 
-With use of this plugin you can set some announcements, ads etc. in all your web-site's posts content. The content of advertisements is a simple image with a link (if necessary). Management of the advertisement is done from a plugin settings subpage under Network Settings page.
+With use of this plugin you can set some announcements, ads etc. in all your web-site's posts content. The content of advertisements is a simple image with a link (if necessary and with the rel="nofollow" attribute). Management of the advertisement is done from a plugin settings subpage under Network Settings page.
 
 ## Installation
 
@@ -38,10 +38,13 @@ Please, clean the cache after you save configure the ads. Otherwise the image wi
 
 ## Changelog
 
+### 1.0.3
+* ADDITIONS
+  * rel="nofollow" attribute to image links.
+
 ### 1.0.2
 * ADDITIONS
   * Plugin internationalisation
-  * rel="nofollow" attribute to image links.
 * ENHANCEMENTS
   * Placeholder bugs fixes
 

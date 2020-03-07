@@ -207,7 +207,7 @@ function smplads_output_ads($html){
 		if (get_site_option($post_type.'_ads_before') == 1){
 
 			if (get_site_option('smplads_content_link_before')){
-				$content = '<a href="'.get_site_option('smplads_content_link_before').'" rel="nofollow"><img src="'.get_site_option('smplads_content_before').'"></a>';
+				$content = '<a href="'.get_site_option('smplads_content_link_before').'" target="_blank" rel="nofollow"><img src="'.get_site_option('smplads_content_before').'"></a>';
 			} else {
 				$content = '<img src="'.get_site_option('smplads_content_before').'">';
 			}
@@ -217,7 +217,7 @@ function smplads_output_ads($html){
 		if (get_site_option($post_type.'_ads_after' ) == 1) {
 
 			if (get_site_option('smplads_content_link_after')){
-				$content = '<a href="'.get_site_option('smplads_content_link_after').'" rel="nofollow"><img src="'.get_site_option('smplads_content_after').'"></a>';
+				$content = '<a href="'.get_site_option('smplads_content_link_after').'" target="_blank" rel="nofollow"><img src="'.get_site_option('smplads_content_after').'"></a>';
 			} else {
 				$content = '<img src="'.get_site_option('smplads_content_after').'">';
 			}

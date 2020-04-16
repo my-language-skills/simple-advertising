@@ -214,14 +214,18 @@ function smplads_output_ads($html){
 			$html = $content.$html;
 		}
 
-		if (get_site_option($post_type.'_ads_after' ) == 1) {
+		// If visitor and desktop.
+		if( ! is_user_logged_in() && ! wp_is_mobile() )	 {
 
-			if (get_site_option('smplads_content_link_after')){
-				$content = '<a href="'.get_site_option('smplads_content_link_after').'" target="_blank" rel="nofollow"><img src="'.get_site_option('smplads_content_after').'"></a>';
-			} else {
-				$content = '<img src="'.get_site_option('smplads_content_after').'">';
+			if (get_site_option($post_type.'_ads_after' ) == 1) {
+
+				if (get_site_option('smplads_content_link_after')){
+					$content = '<a href="'.get_site_option('smplads_content_link_after').'" target="_blank" rel="nofollow"><img src="'.get_site_option('smplads_content_after').'"></a>';
+				} else {
+					$content = '<img src="'.get_site_option('smplads_content_after').'">';
+				}
+				$html .= $content;
 			}
-			$html .= $content;
 		}
 	}
 	return $html;

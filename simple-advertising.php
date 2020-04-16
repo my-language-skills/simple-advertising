@@ -214,8 +214,8 @@ function smplads_output_ads($html){
 			$html = $content.$html;
 		}
 
-		// If visitor and desktop.
-		if( ! is_user_logged_in() && ! wp_is_mobile() )	 {
+		// If visitor - and desktop. && ! wp_is_mobile() 
+		if( ! is_user_logged_in() )	 {
 
 			if (get_site_option($post_type.'_ads_after' ) == 1) {
 
